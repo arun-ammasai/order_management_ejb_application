@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+	<persistence-unit name="OrderManagement"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>com.ordermanagement.beans.entities.Student</class>
+		<class>com.ordermanagement.beans.entities.Customer</class>
+		<class>com.ordermanagement.beans.entities.Employee</class>
+		<class>com.ordermanagement.beans.entities.Office</class>
+		<class>com.ordermanagement.beans.entities.Orderdetail</class>
+		<class>com.ordermanagement.beans.entities.OrderdetailPK</class>
+		<class>com.ordermanagement.beans.entities.Order</class>
+		<class>com.ordermanagement.beans.entities.Payment</class>
+		<class>com.ordermanagement.beans.entities.PaymentPK</class>
+		<class>com.ordermanagement.beans.entities.Productline</class>
+		<class>com.ordermanagement.beans.entities.Product</class>
+		<properties>
+			<property name="eclipselink.target-server" value="None" />
+			<property name="javax.persistence.jdbc.driver"
+				value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mysql://localhost:3306/shopping_database" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="" />
+			<property name="eclipselink.logging.level" value="FINEST" />
+			<property name="eclipselink.validation-only" value="True" />
+		</properties>
+	</persistence-unit>
+</persistence>

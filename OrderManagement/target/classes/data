@@ -1,0 +1,21 @@
+select stu.* from student as stu; -- Relational query
+SELECT s FROM Student s; -- JPA Query
+
+select * from Student where name='John';
+select stu from Student stu where stu.name=:name;
+
+select emp.* from offices off,employees emp where off.officeCode=emp.officeCode and off.city = 'Paris';
+
+select emp from Employee emp,Office off where off.officeCode = emp.office.officeCode and off.city = :city;
+
+select * from employees where employeeNumber = 1143;
+update employees set lastName='Coulson', firstName='Phil' where employeeNumber = 1702;
+
+
+select odr.* from employees emp,customers cust,orders odr where emp.employeeNumber = cust.salesRepEmployeeNumber 
+and cust.customerNumber = odr.customerNumber and emp.employeeNumber=1216;
+
+select odr from Employee emp,Customer cust,Order odr where emp.employeeNumber = cust.employee.employeeNumber
+and cust.customerNumber = odr.customer.customerNumber and emp.employeeNumber = :empNumber;
+
+select * from offices;
